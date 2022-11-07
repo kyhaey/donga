@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1280" />
+    <meta name="description" content="여기를 눌러 링크를 확인하세요." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="동아오츠카" />
+    <meta property="og:url" content="http://kyhaey.dothome.co.kr/donga/" />
+    <meta property="og:image" content="http://kyhaey.dothome.co.kr/donga/images/donga_og.png" />
+    <meta property="og:description" content="여기를 눌러 링크를 확인하세요." />
+    <title>동아오츠카</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favi.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- 라이브러리용 css는 위에 붙여야함 -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="css/layout.css?v=<?php echo time(); ?>" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- css에 없는 특수ease, datepicker 달력프로그램사용시 필요 -->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/ui_common.js?v=<?php echo time(); ?>"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=cmlcrbomn7"></script>
+    <script src="js/donga_map.js"></script>
+  </head>
+  <body>
+    <div id="skip_navi">
+      <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="동아오츠카" /></a>
+          </h1>
+          <nav class="gnb_wrap">
+            <ul class="gnb">
+              <li>
+                <a href="#">회사소개</a>
+                <ul class="depth02">
+                  <li><a href="#">동아오츠카 소개</a></li>
+                  <li><a href="#">인사말</a></li>
+                  <li><a href="#">동아오츠카 연혁</a></li>
+                  <li><a href="#">제품이념</a></li>
+                  <li><a href="#">vision</a></li>
+                  <li><a href="#">기업활동</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                  <li><a href="#">지점안내</a></li>
+                  <li><a href="#">comliance</a></li>
+                  <li><a href="#">채용공고</a></li>
+                  <li><a href="#">지원조회 및 수정</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">제품소개</a>
+                <ul class="depth02">
+                  <li><a href="#">포카리스웨트</a></li>
+                  <li><a href="#">이온워터</a></li>
+                  <li><a href="#">오로나민C</a></li>
+                  <li><a href="#">데미소다</a></li>
+                  <li><a href="#">오란씨</a></li>
+                  <li><a href="#">나랑드사이다</a></li>
+                  <li><a href="#">오라떼</a></li>
+                  <li><a href="#">블랙빈티</a></li>
+                  <li><a href="#">컨피던스</a></li>
+                  <li><a href="#">데자와</a></li>
+                  <li><a href="#">이카리아</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">홍보센터</a>
+                <ul class="depth02">
+                  <li><a href="#">Health Story</a></li>
+                  <li><a href="#">Blue Story</a></li>
+                  <li><a href="#">New TV CF</a></li>
+                  <li><a href="#">인쇄광고</a></li>
+                  <li><a href="#">블루포인트</a></li>
+                  <li><a href="#">진행중 이벤트</a></li>
+                  <li><a href="#">종료된 이벤트</a></li>
+                  <li><a href="#">NEWS</a></li>
+                  <li><a href="#">SNS</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">고객센터</a>
+                <ul class="depth02">
+                  <li><a href="#">고객 상담 전화</a></li>
+                  <li><a href="#">고객의 소리</a></li>
+                  <li><a href="#">고객 상담 절차</a></li>
+                  <li><a href="#">피해보상 기준</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <ul class="util">
+            <li>
+              <a href="#"><img src="images/login.png" alt="로그인" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/shop.png" alt="쇼핑몰" /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div id="container" class="sub_road">
+        <div class="contents">
+          <div class="inner">
+            <h2>찾아오시는길</h2>
+            <div class="road_list">
+              <ul class="road_list_tab clearfix">
+                <li class="active">
+                  <a href="#">서울사무소</a>
+                </li>
+                <li>
+                  <a href="#">안양공장</a>
+                </li>
+                <li>
+                  <a href="#">청주공장</a>
+                </li>
+                <li>
+                  <a href="#">칠서공장</a>
+                </li>
+              </ul>
+            </div>
+            <div id="map"></div>
+            <div class="map_txt">
+              <strong>동아오츠카 서울사무소</strong>
+              <div class="map_txt_right">
+                <div class="address">
+                  <p>서울특별시 동대문구 천호대로 64</p>
+                </div>
+                <div class="tel">
+                  <p>02-2170-7714</p>
+                </div>
+              </div>
+            </div>
+            <div class="navi">
+              <h3>승용차로 오시는 길</h3>
+              <ul>
+                <li>
+                  <h4>강남방면</h4>
+                  <p>
+                    <strong>내부순환도로(동쪽)</strong> - 정릉방향 3차선에서 우회전- 월곡역삼거리 동덕여대,월곡동방향<br />3차선에서 월곡동방향으로 가장 크게 좌회전-CU편의점 지나 월곡교에서 오패산로
+                    방향으로 우회전하여 직진 -생명의 전화 - 200M 전방 우측 삼양식품 본사
+                  </p>
+                </li>
+                <li>
+                  <h4>종로방면</h4>
+                  <p>
+                    <strong>종각역</strong> - 안국동 사거리 - 현대 계동사옥 - 서울대병원 - 혜화동 로터리 - 성신여대입구역 - 미아리고개 -길음역 - 미아사거리 - 장위동방향(드림랜드) 진입 - 육교 전방 100M
+                    지점 <br />
+                    첫 번째 횡단보도 지나서 우회전 -200M 전방 좌측 삼양식품 본사
+                  </p>
+                </li>
+              </ul>
+              <h3>승용차로 오시는 길</h3>
+              <ul>
+                <li>
+                  <h4>강남방면</h4>
+                  <p>
+                    <strong>내부순환도로(동쪽)</strong> - 정릉방향 3차선에서 우회전- 월곡역삼거리 동덕여대,월곡동방향<br />3차선에서 월곡동방향으로 가장 크게 좌회전-CU편의점 지나 월곡교에서 오패산로
+                    방향으로 우회전하여 직진 -생명의 전화 - 200M 전방 우측 삼양식품 본사
+                  </p>
+                </li>
+                <li>
+                  <h4>종로방면</h4>
+                  <p>
+                    <strong>종각역</strong> - 안국동 사거리 - 현대 계동사옥 - 서울대병원 - 혜화동 로터리 - 성신여대입구역 - 미아리고개 -길음역 - 미아사거리 - 장위동방향(드림랜드) 진입 - 육교 전방 100M
+                    지점 <br />
+                    첫 번째 횡단보도 지나서 우회전 -200M 전방 좌측 삼양식품 본사
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="inner clearfix">
+          <div class="menu_wrap">
+            <ul class="footer_menu">
+              <li>
+                <a href="#">이용약관</a>
+              </li>
+              <li>
+                <a href="#">개인정보취급방침</a>
+              </li>
+              <li>
+                <a href="#">감사 제보하기</a>
+              </li>
+              <li>
+                <a href="#">동아쏘시오그룹 정도 경영홈페이지</a>
+              </li>
+            </ul>
+            <p class="address">서울특별시 동대문구 천호대로 64 <span class="bar"></span>Tel 080-999-7644</p>
+            <p class="copyright">Copyright © donga-Otsuka co.</p>
+          </div>
+          <div class="footer_right">
+            <div class="family_wrap">
+              <button class="btn_family" type="button">Family site</button>
+              <ul class="family">
+                <li class="active"><a href="#">Family site</a></li>
+                <li><a href="#">동아쏘시오홀딩스</a></li>
+                <li><a href="#">Otsuka</a></li>
+                <li><a href="#">동아오츠카샵</a></li>
+                <li><a href="#">사이버감사실</a></li>
+                <li><a href="#">인트라넷</a></li>
+              </ul>
+            </div>
+            <div class="sns_wrap">
+              <ul class="sns">
+                <li>
+                  <a href="https://www.facebook.com/Dongaotsuka" target="_blank"><img src="images/1.png" alt="face book" /></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/donga_otsuka/" target="_blank"><img src="images/2.png" alt="instagram" /></a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCseJ2-h0ulRpwJsit2awJ2A" target="_blank"><img src="images/3.png" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="https://blog.naver.com/donga30260" target="_blank"><img src="images/4.png" alt="blog" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

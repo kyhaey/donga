@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.main_slider_wrap .main_slider {height:650px;}
+.main_slider_wrap .swiper-slide { overflow: hidden; position: relative;}
+.main_slider_wrap .slide img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+/* 메인슬라이더 페이지네이션 */
+.swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #8cbbfb;
+    transition: all 0.4s;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+    background: #4992F6;
+}
+
+
+/* 지도 */
+#map {
+    height: 35px;
+}
+
+#map .info {
+    width: 195px;
+}
+
+.info h3 {
+    font-size: 18px;
+    padding: 10px 10px 10px 12px;
+}
